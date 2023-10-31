@@ -1,0 +1,27 @@
+{% extends 'blog/base.html'%}
+
+{% load crispy_forms_tags %}
+
+{% block title%}Edit {% endblock title%}
+
+{% block content%}
+
+<div class="row">
+    <div class="col-md-4 col-12 mx-5 mt-3">
+        <a class="btn btn-outline-secondary" href="{% url 'detail_article' object.pk %}">Go Back</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-12 mx-md-auto mb-3 pb-2 mx-3">
+        <h1>Update Your Post</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+        </div>
+</div>
+
+{% endblock content%}

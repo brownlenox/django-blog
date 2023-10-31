@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+
+{%block title%}Logout {% endblock title%}
+
+
+{% block content%}
+
+    <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
+        <small class="text-muted fw-bolder">You Have Been Logged Out <a href="{% url 'login' %}" class="ml-2">Log in again</a></small>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
+            <h1 class="fw-bolder">Coders blog</h1>
+            <h5 class="text-muted">A blog about coding and computing</h5>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-12 mx-md-auto mx-3 mt-5 mb-5">
+            <h1 class="fw-bolder">It is programming for us.</h1>
+            <h5 class="text-muted">Get notified about trending stuff in the field of prorammimg. Coders blog got you covered.</h5>
+        </div>
+    </div>
+
+{% endblock content%}

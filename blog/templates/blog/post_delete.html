@@ -1,0 +1,28 @@
+{% extends 'blog/base.html'%}
+
+{% block title%}Edit {% endblock title%}
+
+{% load crispy_forms_tags %}
+
+{% block content%}
+
+<div class="row">
+    <div class="col-md-4 col-12 mx-5 mt-3">
+        <a class="btn btn-outline-secondary" href="{% url 'detail_article' object.pk %}">Go Back</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-12 mx-md-auto mb-3 pb-2 mx-3">
+        <h5>Are you sure?</h5>
+        <p>You are about to delete this post, this cannot be undone.</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-danger">Delete</button>
+            </div>
+        </form>
+        </div>
+</div>
+
+{% endblock content%}
